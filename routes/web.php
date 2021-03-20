@@ -13,7 +13,4 @@ use App\Http\Controllers\MemoController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::get('/',[MemoController::class,'showList'])->name('memos');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Memo;
 
 class MemoController extends Controller
 {
@@ -12,6 +13,7 @@ class MemoController extends Controller
      * @return view
      */
     public function showList(){
-        return view('memo.list');
+        $memos =Memo::all();
+        return view('memo.list',['memos'=>$memos]);
     }
 }

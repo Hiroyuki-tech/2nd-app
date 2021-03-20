@@ -8,14 +8,16 @@
             <th>記事番号</th>
             <th>日付</th>
             <th>タイトル</th>
-            <th></th>
+            <th>内容</th>
           </tr>
+          @foreach($memos as $memo)
           <tr>
-            <td>1</td>
-            <td>2020/06/30</td>
-            <td>テスト</td>
-            <td></td>
+            <td>{{$memo->id}}</td>
+            <td>{{$memo->updated_at}}</td>
+            <td>{{$memo->title}}</td>
+            <td>{{$memo->content}}</td>
           </tr>
+          @endforeach
         </table>
       </div>
     </div>

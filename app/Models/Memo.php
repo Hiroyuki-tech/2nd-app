@@ -9,8 +9,8 @@ class Memo extends Model
 {
     use HasFactory;
     //デーブル名
-    protected $table = 'my_flights';
-　　//可変項目
+    protected $table = 'memos';
+    //可変項目
     protected $fillable =
-    ['fillable','content'];
+    ['title','content'];
 }
