@@ -16,4 +16,15 @@ class MemoController extends Controller
         $memos =Memo::all();
         return view('memo.list',['memos'=>$memos]);
     }
+    /**
+     * メモ一覧を表示する
+     * 
+     * @return view
+     */
+    public function showDetail($id){
+        $memo=Memo::find($id);
+        return view('memo.detail',['memo'=>$memo]);
+    }
+
+
 }

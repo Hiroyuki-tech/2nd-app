@@ -14,7 +14,7 @@
           <tr>
             <td>{{$memo->id}}</td>
             <td>{{$memo->updated_at}}</td>
-            <td>{{$memo->title}}</td>
+            <td><a href="/memo/{{$memo->id}}"> {{$memo->title}}</a></td>
             <td>{{$memo->content}}</td>
           </tr>
           @endforeach

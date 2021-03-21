@@ -14,3 +14,4 @@ use App\Http\Controllers\MemoController;
 */
 
 Route::get('/',[MemoController::class,'showList'])->name('memos');
+Route::get('/memo/{id}',[MemoController::class,'showDetail'])->name('show');
