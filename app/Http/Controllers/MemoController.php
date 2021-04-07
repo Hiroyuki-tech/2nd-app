@@ -17,7 +17,7 @@ class MemoController extends Controller
         return view('memo.list',['memos'=>$memos]);
     }
     /**
-     * メモ一覧を表示する
+     * メモ詳細を表示する
      * 
      * @return view
      */
@@ -25,6 +25,12 @@ class MemoController extends Controller
         $memo=Memo::find($id);
         return view('memo.detail',['memo'=>$memo]);
     }
-
-
+    /**
+     * メモ投稿フォームを表示する
+     * 
+     * @return view
+     */
+    public function showCreate(){
+        return view('memo.form');
+    }
 }
